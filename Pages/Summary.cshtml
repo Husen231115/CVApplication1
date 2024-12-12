@@ -1,0 +1,53 @@
+﻿@page "{id:int}"
+@model WebApplication9.Pages.SummaryModel
+@{
+    ViewData["Title"] = "Summary";
+}
+
+@if(Model.cv != null)
+{
+    <h1 style="text-align:center;">Summary</h1>
+    <table style="width:100%; border-collapse:collapse; margin:auto;">
+        <tr style="background-color:#f2f2f2;">
+            <th style="border:1px solid #ddd; padding:8px;">Field</th>
+            <th style="border:1px solid #ddd; padding:8px;">Details</th>
+        </tr>
+        <tr>
+            <td style="border:1px solid #ddd; padding:8px;">First Name</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.FirstName</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #ddd; padding:8px;">Last Name</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.LastName</td>
+        </tr>
+        <tr style="background-color:#f2f2f2;">
+            <td style="border:1px solid #ddd; padding:8px;">Skills</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.Skills</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #ddd; padding:8px;">Nationality</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.Nationality</td>
+        </tr>
+        <tr style="background-color:#f2f2f2;">
+            <td style="border:1px solid #ddd; padding:8px;">Email</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.Email</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #ddd; padding:8px;">Phone Number</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.PhoneNumber</td>
+        </tr>
+        <tr style="background-color:#f2f2f2;">
+            <td style="border:1px solid #ddd; padding:8px;">Photo Name</td>
+            <td style="border:1px solid #ddd; padding:8px;">@Model.cv.Photo</td>
+
+
+        </tr>
+
+    </table>
+}
+else
+{
+    <h1>No Id</h1>
+}
+
+
